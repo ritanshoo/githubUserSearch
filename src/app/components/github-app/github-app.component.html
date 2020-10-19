@@ -1,0 +1,38 @@
+<!--<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>-->
+
+<ngx-spinner bdColor = "rgba(0,0,0,0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<div class="container mt-3">
+  <div class="row di">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <h4>Github User Search</h4>
+        </div>
+        <div class="card-body">
+          <form action="" class="form-inline" (submit)="searchUser()">
+            <div class="form-group">
+              <input name="user" [(ngModel)]="githubUserQuery" type="search" size="40" class="form-control" placeholder="github user">
+            </div>
+            <div class="form-group">
+               <input type="submit" value="search" class="btn btn-secondary btn-sm">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-github-repos [githubRepos]="githubRepos"></app-github-repos>
+    </div>
+  </div>
+</div>
+
+
+<!--<ngx-spinnerbdColor = "rgba(213,10,229,0.11)" size = "medium" color = "#d40b81" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>-->
